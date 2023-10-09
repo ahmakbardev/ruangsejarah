@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Sejarah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="start-style.css">
+</head>
+<body id="style-2" class="start-section">
+    <div class="flex between" style="width: 100%; height: 50px; padding: 10px 20px; background-color: white; align-items: center;">
+        <h4>Ruang Sejarah</h4>
+        <h4 style="font-weight: normal;">Sudah punya akun? <a href="login.html" style="color: black;">Masuk</a></h4>
+    </div>
+    <div class="register flex justify-center align-center">
+        <div class="register-modal" id="registerModal">
+            <h1 style="text-align: center; margin-block: 20px;">Daftar</h1>
+            <div class="register-form">
+                <label for="register-username">Nama:*</label>
+                <input type="text" id="register-username" class="register-input" placeholder="Enter a username">
+
+                <label for="register-email">Email:*</label>
+                <input type="email" id="register-email" class="register-input" placeholder="Enter your email">
+
+                <label for="register-password">Kelas:*</label>
+                <input type="password" id="register-password" class="register-input" placeholder="Choose a password">
+
+                <label for="register-confirm-password">Password:*</label>
+                <input type="password" id="register-confirm-password" class="register-input" placeholder="Confirm your password">
+                <button onclick="handleRegister()" class="register-button hover-up">REGISTER</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+</body>
+
+</html>

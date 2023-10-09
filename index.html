@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Sejarah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="start-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+
+
+</head>
+<body id="style-2">
+    <canvas id="myCanvas"></canvas>
+    <!-- <div class="preloader">
+        <div class="logo-container">
+            <h2>Ruang Sejarah</h2>
+        </div>
+    </div> -->
+    
+                <div class="container-scroller">
+
+                    <nav class="flex align-center justify-center">
+                        <h2>Ruang Sejarah</h2>
+
+                    </nav>
+                    <div class="menu-container">
+                        <ul id="navLinks" class="hidden">
+                            <li><a href="#" data-modal-target="modal-petunjuk">Petunjuk Penggunaan Website</a></li>
+                            <li><a href="#" data-modal-target="modal-kompetensi">Capaian dan Tujuan Pembelajaran</a></li>
+                            <li><a href="materi.html">Materi</a></li>
+                            <li><a href="quiz.html">Latihan</a></li>
+                            <li><a href="#" data-modal-target="modal-rujukan">Daftar Rujukan</a></li>
+                        </ul>
+                        <button id="menuBtn">MENU</button>
+                    </div>
+
+                    <!-- Modals -->
+                    <div id="modal-petunjuk" class="info-modal">
+                        <div class="modal-content">
+                            <!-- <span class="close-btn">&times;</span> -->
+                            <h2 style="margin-block: 10px; text-align: center;">Petunjuk Penggunaan Website</h2>
+                            <div class="instructions" style="  text-align: justify;text-justify: inter-word;">
+                                <ol>
+                                    <li>Setelah berada di halaman utama, pilih Menu Capaian Pembelajaran untuk mengetahui capaian pembelajaran yang di gunakan serta tujuan pembelajaran.</li>
+                                    <li>Setelah melakukan proses kegiatan membaca capaian pembelajaran, serta tujuan pembelajaran di Menu Capaian Pembelajaran. Silahkan pengguna mengakses Menu Materi, kemudian dimohon untuk membaca isi materi dan menonton vidio pembelajaran yang telah di siapkan serta bertanya di kolom chat apabila ada pertanyaan yang ingin disampaikan terkait isi materi.</li>
+                                    <li>Setelah melakukan proses kegiatan membaca isi materi di Menu Materi. Silahkan pengguna untuk mengakses Menu Latihan soal untuk mengerjakan 10 soal pilihan ganda yang telah disiapkan</li>
+                                    <li>Pada tahapan akhir penggunaan website interaktif ‘Ruang Sejarah’. Setelah melakukan proses kegiatan pengerjaan soal di Menu Latihan. Silahkan mengakses Menu Daftar Rujukan apabila pengguna ingin mengetahui rujukan yang digunakan pada isi materi.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal-kompetensi" class="info-modal">
+                        <div class="modal-content">
+                            <!-- <span class="close-btn">&times;</span> -->
+                            <h2 style="margin-block: 10px; text-align: center;">Capaian Pembelajaran dan Tujuan Pembelajaran</h2>
+                            <h3 style="margin-block: 10px;">Capaian Pembelajaran</h3>
+                            <p style="text-align: justify; text-justify: inter-word; width: 90%;">
+                                Capaian Pembelajaran Fase F, peserta didik di Kelas XI dan XII mampu mengembangkan konsep- konsep dasar sejarah untuk mengkaji peristiwa sejarah dalam lintasan lokal, nasional, dan global. Melalui literasi, diskusi, kunjungan langsung ke tempat bersejarah, dan penelitian berbasis proyek kolaboratif peserta didik mampu menganalisis serta mengevaluasi berbagai peristiwa sejarah yang terjadi di Indonesia yang dapat dikaitkan atau dihubungkan dengan berbagai peristiwa lain yang terjadi di dunia pada periode yang sama meliputi Kolonialisme dan Perlawanan Bangsa Indonesia, Pergerakan Kebangsaan Indonesia, Pendudukan Jepang di Indonesia, Proklamasi Kemerdekaan Indonesia, Perjuangan Mempertahankan Kemerdekaan, Pemerintahan Demokrasi Liberal dan Demokrasi Terpimpin, Pemerintahan Orde Baru, serta Pemerintahan Reformasi.
+                            </p>
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Tujuan Pembelajaran</h3>
+                            <div class="instructions" style="  text-align: justify;text-justify: inter-word;">
+                                <ol>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Budi Utomo dengan baik.</li>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Sarekat Islam dengan baik.</li>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Muhammadiyah dengan baik.</li>
+                                    <li>Peserta didik mampu menganlisis tentang Organisasi Taman Siswa dengan baik.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="modal-rujukan" class="info-modal">
+                        <div class="modal-content">
+                            <h2>Daftar Rujukan</h2>
+                            <div class="instructions">
+                                <ul>
+                                    <li>Yasmis, Y. (2008). PERANAN BUDI UTOMO DALAM MENINGKATKAN KESADARAN MASYARAKAT. Jurnal Sejarah Lontar, 5(1), Article 1.</li>
+                                    <li>Husda, H. (2020). Rekonstruksi Sejarah Kebangkitan Nasional. Jurnal Adabiya, 21(2), Article 2. <a href="https://doi.org/10.22373/adabiya.v21i2.6609">link</a>.</li>
+                                    <li>Ricklefs, M. C. (Merle C.) (2005). Sejarah Indonesia Modern 1200—2004 / M.C. Ricklefs. Universitas Indonesia Library; Serambi Ilmu Semesta. <a href="https://lib.ui.ac.id">link</a>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                           
+                    <script>
+                        const menuBtn = document.getElementById("menuBtn");
+                        const navLinks = document.getElementById("navLinks");
+
+                        menuBtn.addEventListener("click", () => {
+                            navLinks.classList.toggle("active");
+                            menuBtn.classList.toggle("active");
+                        });
+
+                        const infoModals = document.querySelectorAll(".info-modal");
+                        const modalLinks = document.querySelectorAll('[data-modal-target]');
+                        const closeBtns = document.querySelectorAll('.close-btn');
+
+                        modalLinks.forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const modalId = link.getAttribute('data-modal-target');
+                                
+                                // Use the 'active' class to show the modal
+                                document.getElementById(modalId).classList.add('active');
+                            });
+                        });
+
+                        closeBtns.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                // Hide all modals
+                                infoModals.forEach(modal => {
+                                    modal.classList.remove('active');
+                                });
+                            });
+                        });
+
+                        // Close modals if clicked outside
+                        window.addEventListener('click', e => {
+                            infoModals.forEach(modal => {
+                                if (e.target == modal) {
+                                    modal.classList.remove('active');
+                                }
+                            });
+                        });
+                    </script>              
+
+                    <div data-scroll data-scroll-delay="100" class="flex level-container" style="padding: 10px; margin-inline: auto;">
+                            <div class="flex column" style="height: 100%; padding: 20px; width: 100%;">
+                                
+                                <h1 style="">Level teratas</h1>
+                                <p style="margin-block: 11px;">Selesaikan Bootcamp kamu dan kamu akan menjadi yang teratas</p>
+                                <div class="flex" style=" padding: 10px 0; border-radius: 20px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.494); height: 380px; overflow-y: hidden;">
+                                    <div class="table-container" id="scroll-table">
+                                        <table class="beautiful-table">
+                                            <thead>
+                                                <tr>
+                                                    <th style="border-top-left-radius: 10px;">#</th>
+                                                    <th>Nama</th>
+                                                    <th>Kelas</th>
+                                                    <th style="border-top-right-radius: 10px;">Score</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td> <!-- Empty cell for auto-increment number -->
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td> <!-- Empty cell for auto-increment number -->
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td> <!-- Empty cell for auto-increment number -->
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>John Doe</td>
+                                                    <td>Mathematics</td>
+                                                    <td>Active</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Jane Smith</td>
+                                                    <td>Science</td>
+                                                    <td>Inactive</td>
+                                                </tr>
+                                                <!-- Add more rows as needed -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                          
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="fitur-container flex level-container" style="margin-inline: auto; overflow: hidden; height: fit-content;">
+                            <div class="flex column" style="width: 100%; margin-bottom: 40px; padding-inline: 40px;">
+                                <div style="text-align: left; margin-block: 30px;">
+                                    <h1>Fitur <br>Ruang Sejarah</h1>
+                                </div>
+                                <div class="flex column" style="width: 300px; gap: 32px;">
+                                    <div class="flex between align-center">
+                                        <i class="fas fa-user-guide"></i>
+                                        <h4 style="width: 80%; text-align: left;">Petunjuk Penggunaan Website</h4>
+                                    </div>
+                                    <div class="flex between align-center">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <h4 style="width: 80%; text-align: left;">Capaian dan Tujuan Pembelajaran</h4>
+                                    </div>
+                                    <div class="flex between align-center">
+                                        <i class="fas fa-book"></i>
+                                        <h4 style="width: 80%; text-align: left;">Materi</h4>
+                                    </div>
+                                    <div class="flex between align-center">
+                                        <i class="fas fa-pencil-alt"></i>
+                                        <h4 style="width: 80%; text-align: left;">Latihan</h4>
+                                    </div>
+                                    <div class="flex between align-center">
+                                        <i class="fas fa-list-alt"></i>
+                                        <h4 style="width: 80%; text-align: left;">Daftar Rujukan</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+            
+                    <!-- <div class="vision-container flex column justify-center align-center">
+                        <h1 class="vision-title">Visi Edutorium</h1>
+                        <h3 class="vision-description">"Mewujudkan platform pembelajaran terdepan di Indonesia yang mengintegrasikan petualangan dan pendidikan, memfasilitasi pengalaman belajar yang mendalam dan praktis, serta mengoptimalkan keterampilan setiap pelajar untuk menjawab tantangan industri dan kebutuhan bangsa di era modern."</h3>
+                    </div> -->
+
+                    
+                    
+                    <div class="footer">
+                        <p>Developed by <b>ahmakbar.dev</b> &copy; 2023</p>
+                    </div>
+                </div>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            <script src="main.js"></script>
+            <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const mySwiper = new Swiper('.swiper-container', {
+        // Enable navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Enable pagination dots
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Make pagination dots clickable
+        },
+
+        // Set autoplay interval (5 seconds in this case)
+        autoplay: {
+            delay: 5000,
+        },
+
+        // Allow looping through slides
+        loop: true
+    });
+});
+
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const rows = document.querySelectorAll(".beautiful-table tbody tr");
+                rows.forEach((row, index) => {
+                    row.querySelector("td").innerText = index + 1;  // Auto-increment row number
+                });
+            });
+            
+            </script>
+            
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.querySelector('.preloader');
+            var confettiSettings = { target: 'myCanvas' };
+            var confettiInstance = new ConfettiGenerator(confettiSettings);
+            
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.visibility = 'hidden';
+                    document.body.style.overflow = 'auto';
+                }, 200);  // corresponds with the 0.2s transition
+            }, 3000);  // 3 seconds delay for preloader
+        });
+        
+    </script>
+    
+
+            
+</body>
+</html>

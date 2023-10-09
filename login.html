@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Sejarah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="start-style.css">
+</head>
+<body id="style-2" class="start-section">
+        <nav class="navbar">
+            <div class="logo">
+                <h2>Ruang sejarah</h2>
+            </div>
+        </nav>
+    
+    <div class="login flex justify-center align-center">
+        <div class="overlay" id="modalOverlay"></div>
+        <img class="img-content" src="asset_new/images/loading.gif" alt="">
+        
+        <div class="message" style="" id="loadingMessage">Loading...</div>
+        <div style="visibility: hidden;" class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    
+        <!-- Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="overlay" id="modalOverlay"></div>
+            <h2 style="text-align: center;">LOGIN</h2>
+            <div class="modal-login">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+        
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
+        
+                <button onclick="handleContinue()" class="hover-up">Masuk</button>
+                <p style="margin-block: 10px;">Belum punya akun? <a style="text-decoration: underline;" onclick="handleRegister()" class="hover-up">Daftar</a></p>
+            </div>
+        </div>
+    </div>
+    
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const loadingBar = document.querySelector('.loading-bar');
+                    const loginModal = document.getElementById('loginModal');
+                    const modalOverlay = document.getElementById('modalOverlay');
+                    
+                    const messages = [
+                        "Loading...",
+                        "Login dulu...",
+                        "hampir selesai..."
+                    ];
+                    let currentMessageIndex = 0;
+
+                    function updateMessage() {
+                        const loadingMessage = document.getElementById('loadingMessage');
+                        
+                        if (loadingBar.style.width === '100%') {
+                            loadingMessage.textContent = "Login Berhasil!";
+                        } else {
+                            loadingMessage.textContent = messages[currentMessageIndex];
+                            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+                        }
+                    }
+
+                    const messageInterval = setInterval(updateMessage, 3000);
+
+                    // Begin loading animation
+                    loadingBar.style.width = '40%';
+
+                    // When 40% is reached, pause and show the login modal
+                    setTimeout(() => {
+                        loadingBar.style.transition = 'none';  
+                        modalOverlay.style.display = 'block';  
+                        loginModal.style.display = 'block';  
+                    }, 2000);
+                });
+
+                function handleContinue() {
+                    const loginModal = document.getElementById('loginModal');
+                    const modalOverlay = document.getElementById('modalOverlay');
+                    
+                    // Hide the login modal and overlay
+                    loginModal.style.display = 'none';
+                    modalOverlay.style.display = 'none';
+
+                    // Rest of your logic
+                    const loadingBar = document.querySelector('.loading-bar');
+                    const loadingMessage = document.getElementById('loadingMessage');
+                    loadingMessage.textContent = "Login Berhasil...";
+
+                    loadingBar.style.transition = "width 6s";
+                    loadingBar.style.width = '100%'; 
+
+                    setTimeout(() => {
+                        window.location.href = "index.html";
+                    }, 600);  
+                }
+
+                function handleRegister() {
+                    window.location.href = "register.html";  // Redirect to the registration page
+                }
+
+
+            </script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            <script src="main.js"></script>
+            <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+            
+</body>
+</html>

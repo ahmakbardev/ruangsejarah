@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Sejarah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="start-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+
+</head>
+<body id="style-2">
+    <canvas id="myCanvas"></canvas>
+    
+                <div class="container-scroller">
+
+                    <nav class="flex align-center between">
+                        <img src="assets/image/start/Ruang Sejarah Logo.png" alt="">
+                        <div class="hamburger" id="hamburgerBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="nav-sign flex" id="nav_links">
+                            <a href="/materi.html" class="hover-up">Organisasi Budi Utomo</a>
+                            <a href="/materi2.html" class="hover-up">Organisasi Sarekat Islam/Sarekat Dagang Islam</a>
+                            <a href="/materi3.html" class="hover-up">Organisasi Muhammadiyah</a>
+                            <a href="/materi4.html" class="hover-up">Organisasi Taman Siswa</a>
+                        </div>
+                      </nav>
+                        <script>
+                        document.getElementById('hamburgerBtn').addEventListener('click', function() {
+                            const nav_links = document.getElementById('nav_links');
+                            const navHeight = document.querySelector('nav').offsetHeight; // Get the height of the nav
+
+                            // Set the top position of .nav-sign to the height of the nav
+                            nav_links.style.top = `${navHeight}px`;
+
+                            if (nav_links.classList.contains('active')) {
+                                nav_links.classList.remove('active');
+                            } else {
+                                nav_links.classList.add('active');
+                            }
+                        });
+                        </script>                    
+                        <div class="fitur-container flex level-container" style="margin-inline: auto; overflow: hidden; height: fit-content;">
+                            <div class="flex column" style="width: 100%; margin-bottom: 40px; padding-inline: 40px;">
+                                <div style="text-align: left; margin-block: 30px;">
+                                    <h2>Organisasi Muhammadiyah</h2>
+                                </div>
+                                <div class=" flex column align-center paragraph-container">
+                                    <p>&nbsp; Organisasi yang lahir pada periode moderat/kooperatif adalah Muhammadiyah. Keberadaan organisasi Budi Utomo telah memberikan inspirasi kepada K.H. Ahmad Dahlan untuk mendirikan sebuah organisasi yang bersifat modern. Ia pun mendirikan organisasi Muhammadiyah pada 18 November 1912 yang bercirikan organisasi sosial, pendidikan, dan keagamaan. Salah satu tujuan didirikannya Muhammadiyah adalah untuk memurnikan ajaran Islam, yaitu seharusnya Islam bersumber pada Alquran dan Al-Hadis, tindakannya adalah amar makruf nahimunkar, atau mengajak hal yang baik dan mencegah hal yang buruk. Pembaruan model Wahabiyah di Arab pun dimulai, antara lain dengan manajemen organisasi modern, pendirian lembaga pendidikan, dan dakwah melalui media atau surat kabar. Sistem pendidikan dibangun dengan cara sendiri, menggabungkan cara tradisional dengan cara modern. Model sekolah Barat ditambah pelajaran agama yang dilakukan di dalam kelas.  Dalam bidang kemasyarakatan, organisasi ini mendirikan rumah sakit, poliklinik, dan rumah yatim piatu yang dikelola oleh lembaga-lembaga. Usaha di bidang sosial itu ditandai dengan berdirinya Pertolongan Kesengsaraan Umum (PKU) pada tanggal 15 Februari 1923. Itulah bentuk kepedulian sosial dan tolong-menolong sesama muslim. </p>
+                                    <img src="asset_new/materi_3.jpg" class="imgTrigger"alt="Description 1">
+                                    <p style="font-size: 12px; text-align: center; margin-bottom: 20px;">Gambar Tokoh-Tokoh Organisasi Muhammadiyah</p>
+                                    <p>&nbsp; Pada 19 Mei 1917, Ahmad Dahlan membentuk seksi perempuan dengan nama ‘Aisyiyah menurut nama seoarang istri nabi, yang kelak akan memainkan peran penting dalam modernisasi kehiduoan perempuan Indonesia (Ricklefs, 2005). Selanjutnya, organisasi wanita juga dibentuk dengan nama ‘Aisyiyah di Yogyakarta sebagai bagian dari organisasi wanita Muhammadiyah. Nama tersebut terinspirasi dari nama ‘Aisyah, istri Nabi Muhammad yang dikenal taat beragama, cerdas, dan rajin bekerja untuk mendukung ekonomi rumah tangga. Diharapkan profil ‘Aisyah juga menjadi profil warga ‘Aisyiyah. Aisyiyah yang masih eksis sampai sekarang didirikan sebagai pembantu peran kaum perempuan, terutama bidang keagamaan. Ketika ‘Aisyiyah berdiri, perempuan tidak mendapatkan akses pendidikan dan kemasyarakatan karena dianggap tidak perlu mengenyam pendidikan, apalagi mempunyai peran kemasyarakatan.Aisyiyah berpendapat bahwa perempuan dan laki-laki sama sama mempunyai kewajiban untuk mengajak kepada kebaikan dan mencegah kemungkaran, termasuk melalui bidang pendidikan.</p>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="material-navigation">
+                            <button id="prevBtn">Kembali</button>
+                            <button id="nextBtn">Selanjutnya</button>
+                        </div>
+                        <script>
+                            document.getElementById("prevBtn").addEventListener("click", function() {
+                                window.location.href = "/materi2.html"; // Navigate to previous material page
+                            });
+
+                            document.getElementById("nextBtn").addEventListener("click", function() {
+                                window.location.href = "/materi4.html"; // Navigate to next material page
+                            });
+
+                        </script>
+
+
+                        <!-- The Image Modal -->
+                        <div id="imgModal" class="img-modal">
+                            <span class="close-btn">&times;</span>
+                            <img class="imgModal-content" id="imgModalContent">
+                            <div id="caption"></div>
+                        </div>
+
+  
+                    
+                    
+                        <div class="footer">
+                            <p>Developed by <b>ahmakbar.dev</b> &copy; 2023</p>
+                        </div>
+                        
+                    <div class="menu-container">
+                        <ul id="navLinks" class="hidden">
+                            <li><a href="#" data-modal-target="modal-petunjuk">Petunjuk Penggunaan Website</a></li>
+                            <li><a href="#" data-modal-target="modal-kompetensi">Capaian dan Tujuan Pembelajaran</a></li>
+                            <li><a href="materi.html">Materi</a></li>
+                            <li><a href="#">Latihan</a></li>
+                            <li><a href="#" data-modal-target="modal-rujukan">Daftar Rujukan</a></li>
+                        </ul>
+                        <button id="menuBtn">MENU</button>
+                    </div>
+
+                    <!-- Modals -->
+                    <div id="modal-petunjuk" class="info-modal">
+                        <div class="modal-content">
+                            <!-- <span class="close-btn">&times;</span> -->
+                            <h2 style="margin-block: 10px; text-align: center;">Petunjuk Penggunaan Website</h2>
+                            <div class="instructions" style="  text-align: justify;text-justify: inter-word;">
+                                <ol>
+                                    <li>Setelah berada di halaman utama, pilih Menu Capaian Pembelajaran untuk mengetahui capaian pembelajaran yang di gunakan serta tujuan pembelajaran.</li>
+                                    <li>Setelah melakukan proses kegiatan membaca capaian pembelajaran, serta tujuan pembelajaran di Menu Capaian Pembelajaran. Silahkan pengguna mengakses Menu Materi, kemudian dimohon untuk membaca isi materi dan menonton vidio pembelajaran yang telah di siapkan serta bertanya di kolom chat apabila ada pertanyaan yang ingin disampaikan terkait isi materi.</li>
+                                    <li>Setelah melakukan proses kegiatan membaca isi materi di Menu Materi. Silahkan pengguna untuk mengakses Menu Latihan soal untuk mengerjakan 10 soal pilihan ganda yang telah disiapkan</li>
+                                    <li>Pada tahapan akhir penggunaan website interaktif ‘Ruang Sejarah’. Setelah melakukan proses kegiatan pengerjaan soal di Menu Latihan. Silahkan mengakses Menu Daftar Rujukan apabila pengguna ingin mengetahui rujukan yang digunakan pada isi materi.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal-kompetensi" class="info-modal">
+                        <div class="modal-content">
+                            <!-- <span class="close-btn">&times;</span> -->
+                            <h2 style="margin-block: 10px; text-align: center;">Capaian Pembelajaran dan Tujuan Pembelajaran</h2>
+                            <h3 style="margin-block: 10px;">Capaian Pembelajaran</h3>
+                            <p style="text-align: justify; text-justify: inter-word; width: 90%;">
+                                Capaian Pembelajaran Fase F, peserta didik di Kelas XI dan XII mampu mengembangkan konsep- konsep dasar sejarah untuk mengkaji peristiwa sejarah dalam lintasan lokal, nasional, dan global. Melalui literasi, diskusi, kunjungan langsung ke tempat bersejarah, dan penelitian berbasis proyek kolaboratif peserta didik mampu menganalisis serta mengevaluasi berbagai peristiwa sejarah yang terjadi di Indonesia yang dapat dikaitkan atau dihubungkan dengan berbagai peristiwa lain yang terjadi di dunia pada periode yang sama meliputi Kolonialisme dan Perlawanan Bangsa Indonesia, Pergerakan Kebangsaan Indonesia, Pendudukan Jepang di Indonesia, Proklamasi Kemerdekaan Indonesia, Perjuangan Mempertahankan Kemerdekaan, Pemerintahan Demokrasi Liberal dan Demokrasi Terpimpin, Pemerintahan Orde Baru, serta Pemerintahan Reformasi.
+                            </p>
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Tujuan Pembelajaran</h3>
+                            <div class="instructions" style="  text-align: justify;text-justify: inter-word;">
+                                <ol>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Budi Utomo dengan baik.</li>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Sarekat Islam dengan baik.</li>
+                                    <li>Peserta didik mampu menganalisis tentang Organisasi Muhammadiyah dengan baik.</li>
+                                    <li>Peserta didik mampu menganlisis tentang Organisasi Taman Siswa dengan baik.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="modal-rujukan" class="info-modal">
+                        <div class="modal-content">
+                            <h2>Daftar Rujukan</h2>
+                            <div class="instructions">
+                                <ul>
+                                    <li>Yasmis, Y. (2008). PERANAN BUDI UTOMO DALAM MENINGKATKAN KESADARAN MASYARAKAT. Jurnal Sejarah Lontar, 5(1), Article 1.</li>
+                                    <li>Husda, H. (2020). Rekonstruksi Sejarah Kebangkitan Nasional. Jurnal Adabiya, 21(2), Article 2. <a href="https://doi.org/10.22373/adabiya.v21i2.6609">link</a>.</li>
+                                    <li>Ricklefs, M. C. (Merle C.) (2005). Sejarah Indonesia Modern 1200—2004 / M.C. Ricklefs. Universitas Indonesia Library; Serambi Ilmu Semesta. <a href="https://lib.ui.ac.id">link</a>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                           
+                    <script>
+                        const menuBtn = document.getElementById("menuBtn");
+                        const navLinks = document.getElementById("navLinks");
+
+                        menuBtn.addEventListener("click", () => {
+                            navLinks.classList.toggle("active");
+                            menuBtn.classList.toggle("active");
+                        });
+
+                        const infoModals = document.querySelectorAll(".info-modal");
+                        const modalLinks = document.querySelectorAll('[data-modal-target]');
+                        const closeBtns = document.querySelectorAll('.close-btn');
+
+                        modalLinks.forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const modalId = link.getAttribute('data-modal-target');
+                                
+                                // Use the 'active' class to show the modal
+                                document.getElementById(modalId).classList.add('active');
+                            });
+                        });
+
+                        closeBtns.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                // Hide all modals
+                                infoModals.forEach(modal => {
+                                    modal.classList.remove('active');
+                                });
+                            });
+                        });
+
+                        // Close modals if clicked outside
+                        window.addEventListener('click', e => {
+                            infoModals.forEach(modal => {
+                                if (e.target == modal) {
+                                    modal.classList.remove('active');
+                                }
+                            });
+                        });
+                    </script>         
+                </div>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            <script src="main.js"></script>
+            <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const mySwiper = new Swiper('.swiper-container', {
+        // Enable navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // Enable pagination dots
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Make pagination dots clickable
+        },
+
+        // Set autoplay interval (5 seconds in this case)
+        autoplay: {
+            delay: 5000,
+        },
+
+        // Allow looping through slides
+        loop: true
+    });
+});
+
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const rows = document.querySelectorAll(".beautiful-table tbody tr");
+                rows.forEach((row, index) => {
+                    row.querySelector("td").innerText = index + 1;  // Auto-increment row number
+                });
+            });
+            
+            </script>
+            
+                            <script>
+                            var modal = document.getElementById("imgModal");
+                            var modalImg = document.getElementById("imgModalContent");
+                            var images = document.getElementsByClassName("imgTrigger");
+
+                            modal.addEventListener("click", function(event) {
+                                if (event.target === modal) { // Check if the clicked element is the modal itself and not its child elements.
+                                    modal.style.display = "none";
+                                }
+                            });
+
+
+                            for (let img of images) {
+                                img.onclick = function() {
+                                    modal.style.display = "block";
+                                    modalImg.src = this.src;
+                                }
+                            }
+
+                            var span = document.getElementsByClassName("close-btn")[0];
+
+                            span.onclick = function() { 
+                                modal.style.display = "none";
+                            }
+
+                            // Allow zooming in and out
+                            modalImg.onclick = function(event) {
+                                if (this.style.maxWidth === "80%") {
+                                    this.style.maxWidth = "100%";
+                                    this.style.cursor = "zoom-out";
+                                } else {
+                                    this.style.maxWidth = "80%";
+                                    this.style.cursor = "zoom-in";
+                                }
+                                event.stopPropagation();  // Prevent the click from bubbling up to the modal.
+                            }
+
+
+                        </script>
+
+            
+</body>
+</html>
